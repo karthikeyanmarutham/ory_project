@@ -1,0 +1,30 @@
+PODS:
+  - Alamofire (5.9.1)
+  - FloatingLableTextField (1.0.0)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - SwiftyJSON (5.0.2)
+
+DEPENDENCIES:
+  - FloatingLableTextField
+  - Moya (~> 14.0.0)
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - FloatingLableTextField
+    - Moya
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  FloatingLableTextField: 89d8c7692528e6d6590a3152686d12c4f8c6bf8b
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  SwiftyJSON: f5b1bf1cd8dd53cd25887ac0eabcfd92301c6a5a
+
+PODFILE CHECKSUM: a3851c0125723674229760b0df490e5c4f0029d4
+
+COCOAPODS: 1.15.2
