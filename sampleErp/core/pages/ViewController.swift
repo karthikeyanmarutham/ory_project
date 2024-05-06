@@ -7,6 +7,7 @@
 
 import UIKit
 import FloatingLableTextField
+import ProgressHUD
 
 class ViewController: UIViewController {
 
@@ -32,22 +33,41 @@ class ViewController: UIViewController {
         self.btnRegister.addTarget(self, action: #selector(onRegister(_:)), for: .touchUpInside)
         self.vwBase.layer.cornerRadius = 8.0
         self.vwBase.layer.masksToBounds = true
+        
+        apiCall()
+    }
+    
+    func apiCall(){
+        ProgressHUD.animate("loading..", interaction: false)
+        APIManager.sharedInstance.getLoginFlowCreate { loginFlowModel in
+            self.appDelegate.flowID = loginFlowModel?.id
+            ProgressHUD.succeed()
+        } onFailed: { error in
+            ProgressHUD.failed()
+            SweetAlert().showAlert("Alert", subTitle: "Error", style: .warning, buttonTitle:  "Ok", buttonColor: .label, otherButtonTitle: "Retry", otherButtonColor: .orange) { isOtherButton in
+                if(isOtherButton){
+                    self.apiCall()
+                }
+            }
+        }
     }
 
+    // submit login request
     @objc func onLogin(_ sender: UIButton){
-        APIManager.sharedInstance.getLoginFlowCreate { loginFlowModel in
+        if(self.txtUserName.hasText && self.txtPassword.hasText){
+            let username = self.txtUserName.text ?? ""
+            let password = self.txtPassword.text ?? ""
             
-            print(loginFlowModel?.id ?? "nil")
+            let flow = self.appDelegate.flowID ?? ""
             
-            _ = SweetAlert().showAlert("Alert", subTitle: "Login Flow Succeed", style: .success, buttonTitle: "Ok", action: { (nbb) in
-    
-            })
-        } onFailed: { error in
-            _ = SweetAlert().showAlert("Alert", subTitle: "Error", style: .warning, buttonTitle: "Ok", action: { (nbb) in
-    
-            })
+            APIManager.sharedInstance.postSubmitLoginFlow(withFlow: flow, withPassword: password, withIdentifier: username) { loginmodel in
+                _ = SweetAlert().showAlert("Login Success", subTitle: "flow ID is \(loginmodel?.id ?? "")", style: .warning, buttonTitle: "Okay")
+            } onFailed: { error in
+                _ = SweetAlert().showAlert("Alert", subTitle: "Something Went to Wrong!!", style: .error, buttonTitle: "Okay")
+            }
+        }else{
+            _ = SweetAlert().showAlert("Alert", subTitle: "Email and Password is must", style: .warning, buttonTitle: "Okay")
         }
-
     }
     
     @objc func onRegister(_ sender: UIButton){

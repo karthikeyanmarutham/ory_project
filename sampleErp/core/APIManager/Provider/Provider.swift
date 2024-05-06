@@ -10,9 +10,8 @@ import Moya
 
 
 enum APIProviderType {
-   case loginFlow
+    case loginFlow
     case submitLogin(method: String, password : String, identifier : String, password_identifier: String, flow : String)
-   
 }
 
 extension APIProviderType : TargetType{
@@ -24,9 +23,10 @@ extension APIProviderType : TargetType{
     var path: String {
         switch self{
         case .loginFlow:
-            return "/self-service/login/api?refresh=true&aal=&return_session_token_exchange_code=true&return_to=&via="
-        case .submitLogin(method: _, password: _, identifier: _, password_identifier: _, flow: let flow):
-            return "/self-service/login?flow=" + flow
+//            return "/self-service/login/api?refresh=true&aal=&return_session_token_exchange_code=true&return_to=&via="
+            return "/self-service/login/api"
+        case .submitLogin(method: _, password: _, identifier: _, password_identifier: _, flow: _):
+            return "/self-service/login"
         }
     }
     
@@ -51,7 +51,7 @@ extension APIProviderType : TargetType{
     var parameters: [String: Any]? {
         switch self {
         case .loginFlow:
-            return [:]
+            return ["refresh":true,"return_session_token_exchange_code":true]
         case .submitLogin(method: let method, password: let password, identifier: let identifier, password_identifier: let password_identifier, flow: _):
             return [
                 "method" : method,
@@ -64,10 +64,15 @@ extension APIProviderType : TargetType{
     
     var task: Moya.Task {
         switch self {
-        case .submitLogin(_,_,_,_,_):
-            return .requestParameters(parameters: parameters!, encoding: URLEncoding.default)
-        default:
-            return .requestPlain
+        case .loginFlow:
+            return .requestParameters(parameters: parameters!, encoding: URLEncoding.queryString)
+        case .submitLogin(_,_,_,_,flow: let flow):
+           //return .requestCompositeData(bodydata: parameters,  urlParameters: ["flow" : flow])
+//            return .requestCompositeData(bodyData: parameters, urlParameters: ["flow" : flow])
+            
+            return .requestCompositeParameters(bodyParameters: parameters ?? [:], bodyEncoding: URLEncoding.httpBody, urlParameters: ["flow" : flow])
+//        default:
+//            return .requestPlain
         }
     }
     
@@ -76,7 +81,7 @@ extension APIProviderType : TargetType{
         case .loginFlow:
             return ["Authorization": "Bearer qZNu.jfSiUJhc.ufCn-R6l3sWj"]
         case .submitLogin(method: _, password: _, identifier: _, password_identifier: _, flow: _):
-            return [:]
+            return ["Content-Type":"application/x-www-form-urlencoded", "Accept":"application/json"]
         }
     }
 }

@@ -9,6 +9,7 @@ target 'sampleErp' do
   pod 'FloatingLableTextField'
   pod 'Moya', '~> 14.0.0'
   pod 'SwiftyJSON'
+  pod 'ProgressHUD'
 
   target 'sampleErpTests' do
     inherit! :search_paths

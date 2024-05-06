@@ -20,7 +20,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPi-Ms-CdT">
                                 <rect key="frame" x="16" y="305" width="361" height="323"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DiK-W7-AC8" customClass="FloatigLableTextField" customModule="FloatingLableTextField">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DiK-W7-AC8" customClass="FloatigLableTextField" customModule="FloatingLableTextField">
                                         <rect key="frame" x="29" y="46" width="309" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -157,20 +157,20 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Register"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have Account" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXR-G9-CfS">
-                                        <rect key="frame" x="8" y="442" width="165.66666666666666" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hk-ot-nOB">
-                                        <rect key="frame" x="181.66666666666663" y="435" width="171.33333333333337" height="35"/>
+                                        <rect key="frame" x="225" y="435" width="128" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="Rod-5V-bW1"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Login here !!"/>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have Account" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXR-G9-CfS">
+                                        <rect key="frame" x="51" y="442" width="165.66666666666666" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -181,10 +181,10 @@
                                     <constraint firstAttribute="bottom" secondItem="9hk-ot-nOB" secondAttribute="bottom" constant="14" id="MMl-Ua-24b"/>
                                     <constraint firstItem="KRN-L6-N8c" firstAttribute="top" secondItem="TDy-wX-2G4" secondAttribute="bottom" constant="20" id="TKI-As-QAK"/>
                                     <constraint firstItem="TDy-wX-2G4" firstAttribute="leading" secondItem="We5-yF-1J7" secondAttribute="leadingMargin" id="U4K-jY-4a6"/>
-                                    <constraint firstItem="KRN-L6-N8c" firstAttribute="leading" secondItem="ZXR-G9-CfS" secondAttribute="leading" id="X37-CT-Zbm"/>
+                                    <constraint firstItem="KRN-L6-N8c" firstAttribute="leading" secondItem="ZXR-G9-CfS" secondAttribute="leading" constant="-43" id="X37-CT-Zbm"/>
                                     <constraint firstItem="TDy-wX-2G4" firstAttribute="leading" secondItem="KRN-L6-N8c" secondAttribute="leading" id="a0o-3J-MwJ"/>
                                     <constraint firstItem="KRN-L6-N8c" firstAttribute="trailing" secondItem="9hk-ot-nOB" secondAttribute="trailing" id="gfu-Tw-JMy"/>
-                                    <constraint firstItem="9hk-ot-nOB" firstAttribute="leading" secondItem="ZXR-G9-CfS" secondAttribute="trailing" constant="8" symbolic="YES" id="ifI-jW-tvu"/>
+                                    <constraint firstItem="9hk-ot-nOB" firstAttribute="leading" secondItem="ZXR-G9-CfS" secondAttribute="trailing" constant="8.3333333333333428" id="ifI-jW-tvu"/>
                                     <constraint firstItem="TDy-wX-2G4" firstAttribute="trailing" secondItem="We5-yF-1J7" secondAttribute="trailingMargin" id="zSN-js-u1D"/>
                                 </constraints>
                             </view>
@@ -219,10 +219,10 @@
     </scenes>
     <designables>
         <designable name="DiK-W7-AC8">
-            <size key="intrinsicContentSize" width="128" height="34"/>
+            <size key="intrinsicContentSize" width="138" height="34"/>
         </designable>
         <designable name="xGU-cs-h2q">
-            <size key="intrinsicContentSize" width="118" height="34"/>
+            <size key="intrinsicContentSize" width="128" height="34"/>
         </designable>
     </designables>
     <resources>

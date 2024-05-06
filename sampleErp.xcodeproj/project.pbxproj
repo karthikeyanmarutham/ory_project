@@ -26,6 +26,7 @@
 		2F5959322BE64AF1007BB293 /* APImanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5959312BE64AF1007BB293 /* APImanager.swift */; };
 		2F5959352BE64B8F007BB293 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5959342BE64B8F007BB293 /* Provider.swift */; };
 		2F5959382BE689B4007BB293 /* LoginFlowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5959372BE689B4007BB293 /* LoginFlowModel.swift */; };
+		2FA269832BE76E33009241E8 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA269822BE76E33009241E8 /* LoginModel.swift */; };
 		430F065E1CB97C51AE525E67 /* Pods_sampleErp_sampleErpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8981C0FBECA35AD9A9EA0E14 /* Pods_sampleErp_sampleErpUITests.framework */; };
 		4764190F983245EA78C95ABE /* Pods_sampleErpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB8A7F008407AAD85E08A18 /* Pods_sampleErpTests.framework */; };
 		935DA9FBBC03EB8F71FADA41 /* Pods_sampleErp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B4ED82B2C35636A4D2543C /* Pods_sampleErp.framework */; };
@@ -73,6 +74,7 @@
 		2F5959312BE64AF1007BB293 /* APImanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APImanager.swift; sourceTree = "<group>"; };
 		2F5959342BE64B8F007BB293 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		2F5959372BE689B4007BB293 /* LoginFlowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowModel.swift; sourceTree = "<group>"; };
+		2FA269822BE76E33009241E8 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		478C9CA2AD413627AAD0DED4 /* Pods-sampleErp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleErp.debug.xcconfig"; path = "Target Support Files/Pods-sampleErp/Pods-sampleErp.debug.xcconfig"; sourceTree = "<group>"; };
 		54198420CB632D3DA2C9FE8D /* Pods-sampleErp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleErp.release.xcconfig"; path = "Target Support Files/Pods-sampleErp/Pods-sampleErp.release.xcconfig"; sourceTree = "<group>"; };
 		6DD14437564F7AC4316C2914 /* Pods-sampleErp-sampleErpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleErp-sampleErpUITests.debug.xcconfig"; path = "Target Support Files/Pods-sampleErp-sampleErpUITests/Pods-sampleErp-sampleErpUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				2F5959372BE689B4007BB293 /* LoginFlowModel.swift */,
+				2FA269822BE76E33009241E8 /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				2F1D2B4A2BE4C09600CA7B69 /* SceneDelegate.swift in Sources */,
 				2F5959322BE64AF1007BB293 /* APImanager.swift in Sources */,
 				2F5959352BE64B8F007BB293 /* Provider.swift in Sources */,
+				2FA269832BE76E33009241E8 /* LoginModel.swift in Sources */,
 				2F1D2B8C2BE61C2000CA7B69 /* RegisterTableCellView.swift in Sources */,
 				2F1D2B522BE4C09600CA7B69 /* sampleErp.xcdatamodeld in Sources */,
 				2F1D2B7F2BE5103200CA7B69 /* Extenstions.swift in Sources */,
